@@ -1,0 +1,13 @@
+<uwsgi id="application"> 
+        <socket>127.0.0.1:8001</socket> 
+	<module>application</module> 
+	<master />
+	<pythonpath>/data/www/squid</pythonpath>
+	<chdir>/data/www/squid</chdir>
+	<processes>4</processes> 
+	<workers>4</workers>
+	<memory-report/>
+	<pidfile>/data/log/api_squid.pid</pidfile> 
+	<max-requests>10000</max-requests> 
+	<daemonize>/dev/null</daemonize>  
+</uwsgi>
